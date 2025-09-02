@@ -571,21 +571,6 @@
     }
 
     // === EXPORT / LAPORAN ===
-    function exportExcel() {
-        let data =
-            "Nama\tIuran\nBudi\t10000\nSiti\t0";
-        let blob = new Blob([data], { type: "application/vnd.ms-excel" });
-        let url = URL.createObjectURL(blob);
-
-        let a = document.createElement("a");
-        a.href = url;
-        a.download = "laporan.xlsx";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    }
-
-    
     function unduhPDF(){
       let tahunDipilih = parseInt(document.getElementById("tahunSelect").value);
       let bulanDipilih = parseInt(document.getElementById("bulanSelect").value);
@@ -748,3 +733,4 @@
 </body>
 
 </html>
+
